@@ -1,0 +1,13 @@
+{% include 'header' %}
+
+import Foundation
+
+class {{ module_info.name }}Interactor: {{ module_info.name }}InteractorProtocol {
+	
+	weak var presenter: {{ module_info.name }}PresenterProtocol!
+
+	required init(presenter: {{ module_info.name }}PresenterProtocol) {
+		self.presenter = presenter
+	}
+
+}

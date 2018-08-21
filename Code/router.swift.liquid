@@ -1,0 +1,14 @@
+{% include 'header' %}
+
+import Foundation
+import UIKit
+
+class {{ module_info.name }}Router: {{ module_info.name }}RouterProtocol {
+	
+	weak var viewController: {{ module_info.name }}ViewController!
+
+	init(viewController: {{ module_info.name }}ViewController) {
+		self.viewController = viewController
+	}
+
+}

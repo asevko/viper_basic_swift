@@ -1,0 +1,17 @@
+{% include 'header' %}
+
+import Foundation
+import UIKit
+
+class {{ module_info.name }}Configurator: {{ module_info.name }}ConfiguratorProtocol {
+
+	func configure(with viewController: {{ module_info.name }}ViewController) {
+		let presenter = {{ module_info.name }}Presenter(view: viewController)
+		let interactor = {{ module_info.name }}Interactor(presenter: presenter)
+		let router = {{ module_info.name }}Router(viewController: viewController)
+
+		viewController.presenter = presenter
+		presenter.interactor = interactor
+		presenter.router = router
+	}
+}

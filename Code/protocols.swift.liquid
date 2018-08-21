@@ -1,0 +1,24 @@
+{% include 'header' %}
+
+import Foundation
+
+protocol {{ module_info.name }}ViewProtocol: class {
+	
+}
+
+protocol {{ module_info.name }}PresenterProtocol: class {
+	var router: {{ module_info.name }}RouterProtocol! { set get }
+	func configureView()
+}
+
+protocol {{ module_info.name }}InteractorProtocol: class {
+	
+}
+
+protocol {{ module_info.name }}RouterProtocol: class {
+	
+}
+
+protocol {{ module_info.name }}ConfiguratorProtocol: class {
+	func configure(with viewController: {{ module_info.name }}ViewController)
+}
